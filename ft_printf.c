@@ -17,7 +17,7 @@ static size_t ft_convert(char c, va_list ap)  // refer to va_arg
     else if(c =='x'|| c == 'X')
         count +=ft_puthexlow(va_arg(ap,  long long), c);
     else if (c == 'p')
-        count +=ft_adress(va_arg(ap,void *ptr));
+        count +=ft_adress(va_arg(ap, void *ptr));
     if (c == '%')
        count += write(1, &c, 1);
        

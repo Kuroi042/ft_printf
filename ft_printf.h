@@ -20,8 +20,7 @@ size_t ft_putstring( char *str);
 size_t	ft_putnbr(long long n);
 size_t ft_putunsigned(unsigned long i);
 size_t ft_puthexlow(unsigned int i, char c);
-int  ft_adress(void*ptr);
-
+int   ft_adress(unsigned long n);
 
 
 #endif
