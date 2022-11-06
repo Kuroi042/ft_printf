@@ -10,13 +10,16 @@ static size_t ft_convert(char c, va_list ap)  // refer to va_arg
    
     else if (c == 's')
         count +=ft_putstring(va_arg(ap,char*));
+    else if (c == 'd' || c == 'i')
+        count +=ft_putnbr(va_arg(ap,int));
+    else if(c =='u')
+        count +=ft_putunsigned(va_arg(ap, unsigned long));
     if (c == '%')
        count += write(1, &c, 1);
+       
 
     return count;
 }
-
-
 
 
 int ft_printf(const char *str, ...)
@@ -42,12 +45,12 @@ int ft_printf(const char *str, ...)
     va_end(ptr);
     return  counter;
 }
-#include <stdio.h>
-int main()
-{
-    int i ;
+// #include <stdio.h>
+// int main()
+// {
+//     int i ;
 
-    i = ft_printf("mol : %s\n", "charaf");
+//     i = ft_printf("mol : %d\n", 45);
 
-    printf("%d",i);
-}
+//     printf("%d",i);
+// }
