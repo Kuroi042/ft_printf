@@ -19,30 +19,14 @@ size_t ft_hex(long long i, char c)
 size_t ft_puthexlow(unsigned int i, char c)
 {
     size_t count;
-	count  = 0;
-    {
-
-	
-    size_t count;
     count = 0;
 	
-    
-	 if (i < 0)
+	if (i >= 16)
 	{
-	 	i *= -1;
-	 	 count += ft_putchar('-');
-	 }
-	 if (i > 16)
-	{
-		count +=ft_puthexlow(i / 16, c);
+		count += ft_puthexlow(i / 16, c);
 		count += ft_puthexlow(i % 16, c);
 	}
-	if (i >= 0 && i <= 16)
-	{
-		count +=ft_hex(i, c);
-	}
-
+	else if (i >= 0 && i <= 15)
+		count += ft_hex(i, c);
     return count;
- }
-
 }
