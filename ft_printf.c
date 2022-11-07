@@ -14,6 +14,10 @@ static size_t ft_convert(char c, va_list ap)  // refer to va_arg
         count +=ft_putnbr(va_arg(ap,int));
     else if(c =='u')
         count +=ft_putunsigned(va_arg(ap, unsigned long));
+    else if(c =='x'|| c == 'X')
+        count +=ft_puthexlow(va_arg(ap,  long long), c);
+    else if (c == 'p')
+        count +=ft_adress(va_arg(ap,void *ptr));
     if (c == '%')
        count += write(1, &c, 1);
        
@@ -50,7 +54,8 @@ int ft_printf(const char *str, ...)
 // {
 //     int i ;
 
-//     i = ft_printf("mol : %d\n", 45);
-
+//     i = ft_printf("%x\n", -1);
+//     printf("%d\n",i);
+//     i = printf("%p\n", -1);
 //     printf("%d",i);
 // }

@@ -4,7 +4,7 @@ AR = ar rcs
 
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
-SRC = ft_putchar.c ft_printf.c ft_putstring.c ft_putnbr.c ft_putunsigned.c
+SRC = ft_putchar.c ft_printf.c ft_putstring.c ft_putnbr.c ft_putunsigned.c ft_puthexa.c ft_adress.c
 OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
