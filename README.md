@@ -34,21 +34,24 @@ The ft_printf function mimic the printf function in C , a fundamental output fun
 ### Formatting Options
 - Input
 ```
+#include "ft_printf.h"
+
+int main(){
 int num = 3;
 char ch = 'A';
-char str[] = "Hello its Jesus!";
+char str[] = "call me Jesus!";
 
-printf("Character: %c\n", ch);
-printf("String: %s\n", str);
-printf("Decimal: %d\n", num);
-printf("Hexadecimal: %x\n", num);
-
+ft_printf("Character: %c\n", ch);
+ft_printf("String: %s\n", str);
+ft_printf("Decimal: %d\n", num);
+ft_printf("Hexadecimal: %x\n", num);
+}
 ```
 
 - Output
 ```
 Character: A
-String: Hello its Jesus!
+String: call me Jesus!
 Decimal: 3
 Hexadecial:2a
 
