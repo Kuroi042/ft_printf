@@ -32,7 +32,7 @@ The ft_printf function mimic the printf function in C , a fundamental output fun
 
 
 ### Formatting Options
--input
+- Input
 
 `int num = 42;`
 
@@ -46,7 +46,7 @@ The ft_printf function mimic the printf function in C , a fundamental output fun
 `printf("Octal: %o\n", num);`
 
 
--Output
+- Output
 
 `Character: A`
 `String: Hello, World!`
