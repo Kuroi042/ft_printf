@@ -33,27 +33,26 @@ The ft_printf function mimic the printf function in C , a fundamental output fun
 
 ### Formatting Options
 - Input
+```
+int num = 3;
+char ch = 'A';
+char str[] = "Hello its Jesus!";
 
-`int num = 42;`
+printf("Character: %c\n", ch);
+printf("String: %s\n", str);
+printf("Decimal: %d\n", num);
+printf("Hexadecimal: %x\n", num);
 
-`char ch = 'A';`
-
-`char str[] = "Hello, World!";`
-`printf("Character: %c\n", ch);`
-`printf("String: %s\n", str);`
-`printf("Decimal: %d\n", num);`
-`printf("Hexadecimal: %x\n", num);`
-`printf("Octal: %o\n", num);`
-
+```
 
 - Output
+```
+Character: A
+String: Hello its Jesus!
+Decimal: 3
+Hexadecial:2a
 
-`Character: A`
-`String: Hello, World!`
-`Decimal: 42`
-`Hexadecimal: 2a`
-`Octal: 52`
-
+```
 ##Return Value
 On success, ft_printf returns the number of characters printed (excluding the null byte used to end the string).
 On failure, it returns a negative value.
